@@ -1,6 +1,6 @@
-import {Button, Card, Col, Container, Row, Spinner} from "react-bootstrap";
+import {Card, Col, Container, Row, Spinner} from "react-bootstrap";
 import {useApi} from "../../../Hooks/useApi";
-import { Link, useParams} from "react-router-dom";
+import { useParams} from "react-router-dom";
 
 
 const CreatureDetail = () => {
