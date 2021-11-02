@@ -12,7 +12,7 @@ const Creatures = () => {
                 <Row className={'my-5'}>
                     <h1 className={'text-white'}>Creatures Compendium</h1>
                 </Row>
-                { loading && <Spinner animation="border" role="status">
+                { loading && <Spinner variant={'light'} animation="border" role="status">
                     <span className="visually-hidden">Loading...</span>
                 </Spinner> }
                 <Row xs={2} md={3} lg={3} className="g-4">
@@ -28,7 +28,7 @@ const Creatures = () => {
                                         {_.description.substring(0, 90) + '...'}
                                     </Card.Text>
                                     <Button>
-                                        <Link to={`monster/${_.id}`}> click me</Link>
+                                        <Link to={`creature/${_.id}`}> click me</Link>
                                     </Button>
                                 </Card.Body>
                             </Card>
