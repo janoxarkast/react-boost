@@ -19,7 +19,7 @@ const CreatureDetail = () => {
                     <Row className={'my-5'}>
                         <h1 className={'text-white'}>Creatures Compendium</h1>
                     </Row>
-                    <Row xs={2} md={3} lg={3} className="g-4">
+                    <Row xs={1} className="g-4">
                         <Col>
                             <Card bg={'dark'} text={'white'} border={'warning'} >
                                 <Card.Header>
