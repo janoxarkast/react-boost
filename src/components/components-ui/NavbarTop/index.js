@@ -1,4 +1,5 @@
 import {Container, Nav, Navbar} from "react-bootstrap";
+import {Link} from "react-router-dom";
 
 export const NavbarTop = () => {
     return (<Navbar variant="dark" expand="lg" className={'header-bg'}>
@@ -7,8 +8,16 @@ export const NavbarTop = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-                    <Nav.Link href="/creatures">Creatures</Nav.Link>
-                    <Nav.Link href="/profile">Profile</Nav.Link>
+                    <Nav.Link className={'text-decoration-none'}>
+                        <Link className={'text-decoration-none text-white-50'} to={'/creatures'}>
+                            Creatures
+                        </Link>
+                    </Nav.Link>
+                    <Nav.Link >
+                        <Link className={'text-decoration-none text-white-50'} to={'/profile'}>
+                            Profile
+                        </Link>
+                    </Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Container>

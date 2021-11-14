@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {NavbarTop} from "./components/components-ui/NavbarTop";
 const Creatures = lazy(() => import('./components/Views/Creatures'));
 const CreatureDetail = lazy(() => import('./components/Views/CreatureDetail'));
+const Profile = lazy(() => import('./components/Views/Profile'));
 
 
 const logo = 'https://i.pinimg.com/736x/9b/55/00/9b5500887359a38dc030cc8c0ed4e22a.jpg'
@@ -21,6 +22,7 @@ function App() {
             <Route exact path={'/'} >{hp}</Route>
             <Route exact path={'/creatures'} component={Creatures} />
             <Route path={'/creature/:id'} component={CreatureDetail} />
+            <Route path={'/profile'} component={Profile} />
         </Switch>
         </Suspense>
     </div>
