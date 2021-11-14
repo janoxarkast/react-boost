@@ -1,6 +1,6 @@
-import {Badge, Card, Col, Container, ListGroup, Row, Spinner} from "react-bootstrap";
+import {Badge, Button, Card, Col, Container, ListGroup, Row, Spinner} from "react-bootstrap";
 import {useApi} from "../../../Hooks/useApi";
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import "./creature-detail.css"
 
 
@@ -17,7 +17,8 @@ const CreatureDetail = () => {
                 {creature && creature.data &&
                 <>
                     <Row className={'my-5'}>
-                        <h1 className={'text-white'}>Creatures Compendium</h1>
+
+                        <h1 className={'text-white'}><Link className={'text-white me-5'} to={`/creatures`}>←</Link>Creature Details</h1>
                     </Row>
                     <Row xs={1} className="g-4">
                         <Col>
@@ -45,7 +46,7 @@ const CreatureDetail = () => {
                                         <Col>
                                             <h4 className="postcard__title red text-center">Locations</h4>
                                             <ul className="postcard__tagbox">
-                                                {creature.data.common_locations.length > 0 &&
+                                                {creature.data.common_locations?.length > 0 &&
                                                 creature.data.common_locations.map((loc, index) => (
                                                     <li key={index} className="tag__item">{loc}</li>))}
                                             </ul>

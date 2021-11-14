@@ -32,9 +32,9 @@ const Creatures = () => {
                                     </Card.Body>
                                     <Card.Footer>
                                         <div className="media">
-                                            <Button variant={'outline-light'}>
-                                                Dettaglio
-                                            </Button>
+                                            <Link to={`creature/${_.id}`}><Button
+                                                variant={'outline-light'}> Dettaglio </Button>
+                                            </Link>
                                         </div>
 
                                     </Card.Footer>
